@@ -47,4 +47,9 @@ jobs:
 
       - name: Symfony check vulnerabilities
         run: symfony check:security
+      
+      - name: PHP-CS-FIXER
+        run: |
+            composer require friendsofphp/php-cs-fixer
+            ./vendor/bin/php-cs-fixer fix --dry-run
 
