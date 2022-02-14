@@ -75,4 +75,4 @@ jobs:
         run: symfony console doctrine:schema:validate --skip-sync -vvv --no-interaction
 
       - name: PHP Unit
-        run: symfony phpunit
+        run: php bin/phpunit
