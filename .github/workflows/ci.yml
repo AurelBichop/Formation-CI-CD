@@ -26,9 +26,7 @@ jobs:
           # Setup PHP extensions.
           extensions: mbstring, xml, ctype, iconv, intl, pdo, pdo_mysql, dom, filter, gd, json
       # Runs a single command using the runners shell
-      - name: LS
-        run: ls
-        
+    
       - name: Cache multiple paths
         uses: actions/cache@v2.1.7
         with:
@@ -41,4 +39,12 @@ jobs:
       - name: Composer install
         run: composer install --no-interaction --no-progress
 
+      - name: Symfony CLI
+        run: |
+            echo 'deb [trusted=yes] https://repo.symfony.com/apt/ /' | sudo tee /etc/apt/sources.list.d/symfony-cli.list
+            sudo apt update
+            sudo apt install symfony-cli 
+
+      - name: Symfony check vulnerabilities
+        run: symfony check:security
 
