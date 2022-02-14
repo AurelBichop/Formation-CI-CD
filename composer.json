@@ -100,5 +100,10 @@
             "allow-contrib": true,
             "require": "6.0.*"
         }
+    },
+    "allow-plugins": {
+        "symfony/flex":                         true,
+        "symfony/runtime":                      true,
+        "composer/package-versions-deprecated": true
     }
 }
