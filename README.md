@@ -1,6 +1,9 @@
 Symfony Demo Application
 ========================
 
+[![Pipeline-CI](https://github.com/AurelBichop/Formation-CI-CD/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/AurelBichop/Formation-CI-CD/actions/workflows/ci.yml)
+
+
 The "Symfony Demo Application" is a reference application created to show how
 to develop applications following the [Symfony Best Practices][1].
 
